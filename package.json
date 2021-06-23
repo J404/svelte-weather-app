@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "build": "rollup -c",
+    "build:css": "postcss src/tailwind.css -o public/global.css",
     "dev": "rollup -c -w",
+    "watch:css": "postcss -w src/tailwind.css -o public/global.css",
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
@@ -26,7 +28,8 @@
   },
   "dependencies": {
     "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.36",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
     "sirv-cli": "^1.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.2"
   }
